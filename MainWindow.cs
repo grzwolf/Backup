@@ -672,7 +672,7 @@ namespace Backup
 
     }
 
-    // allows to change the progressbar color
+    // allows to change the progressbar color: https://stackoverflow.com/questions/778678/how-to-change-the-color-of-progressbar-in-c-sharp-net-3-5
     public static class ModifyProgressBarColor
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
