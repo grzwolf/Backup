@@ -234,9 +234,9 @@
             this.checkBoxAutoExecute.AutoSize = true;
             this.checkBoxAutoExecute.Location = new System.Drawing.Point(3, 22);
             this.checkBoxAutoExecute.Name = "checkBoxAutoExecute";
-            this.checkBoxAutoExecute.Size = new System.Drawing.Size(158, 17);
+            this.checkBoxAutoExecute.Size = new System.Drawing.Size(160, 17);
             this.checkBoxAutoExecute.TabIndex = 2;
-            this.checkBoxAutoExecute.Text = "Execute at app start && close";
+            this.checkBoxAutoExecute.Text = "Execute backup at app start";
             this.checkBoxAutoExecute.UseVisualStyleBackColor = true;
             this.checkBoxAutoExecute.CheckedChanged += new System.EventHandler(this.checkBoxAutoExecute_CheckedChanged);
             // 
