@@ -295,6 +295,8 @@ namespace Backup
             if ( copyMode ) {
                 System.IO.Directory.CreateDirectory(_backupFolder);
             }
+            int total = lSource.Count();
+            int current = 0;
             foreach ( string src in lSource ) {
                 if ( !_run ) {
                     return "break";
@@ -342,6 +344,10 @@ namespace Backup
                         skipCount++;
                     }
                     // progress
+                    if ( current % 50 == 0 ) {
+                        this.Text = String.Format("{0} / {1}", current, total);
+                    }
+                    current++;
                     this.progressBar.PerformStep();
                     Application.DoEvents();
                 } catch {
@@ -349,6 +355,7 @@ namespace Backup
                     errCount++;
                 }
             }
+            this.Text = String.Format("{0} / {1}", current, total);
 
             // grant a cooperative 2s wait for f&f file copy
             if ( copyMode ) {
